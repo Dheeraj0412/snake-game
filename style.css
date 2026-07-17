@@ -1,0 +1,158 @@
+/* Boilerplate code */
+*{                        
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+/* ------------------------- */
+
+:root{
+    /* Background colors */
+    --bg-primary-color : #111111;
+    --bg-fill-color : #f3f3f3;
+    --bg-food-color : rgb(235, 21, 21);
+
+    /* Text color */
+    --text-color : #f1f1f1;
+
+    /* Spacing variables */
+    --space-xs : 4px;
+    --space-sm : 8px;
+    --space-md : 16px;
+    --space-lg : 24px;
+    --space-xl : 32px;
+    --space-2xl : 40px;
+    --space-3xl : 48px;
+
+    /* Border colors */
+    --border-primary-color : #333333;
+
+    /* Border-Radius */
+    --border-radius-xs: 4px;
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;    
+    --border-radius-lg: 16px;    
+    --border-radius-xl: 20px;    
+    --border-radius-2xl: 24px;    
+    --border-radius-3xl: 28px;    
+
+}
+
+
+html{
+    background-color: var(--bg-primary-color);
+    color: var(--text-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main, section{
+    width: 100%;
+    height: 100%;
+}
+
+section{
+    padding: var(--space-2xl);
+    height: 100%;
+    display: flex;
+    /* flex-direction decides the direction in which flex items are placed inside a flex container. */
+    flex-direction: column;  
+    gap: var(--space-lg);     
+
+}
+
+section .infos{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info{
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--border-primary-color);
+    border-radius: var(--border-radius-sm)
+    ;
+}
+
+.board{
+    border: 1px solid var(--border-primary-color);
+    /* flex-grow determines how much an item should expand to fill the extra space available in the container. */
+    flex-grow: 1;
+    display: grid;
+    border-radius: 20px;
+    /* minmax(30px,1fr) - minimum width 30px and it divide completely into box to cover space maximum 1fr i.e 1 fraction*/
+    grid-template-columns: repeat(auto-fill,minmax(50px, 1fr));  
+    grid-template-rows: repeat(auto-fill,minmax(50px,1fr));
+}
+
+.block{
+    /* width: 30px;
+    height: 30px; */
+    border: 1px solid var(--border-primary-color);
+    border-radius: 20px;
+}
+
+.fill{
+    background-color: var(--bg-fill-color);
+}
+
+.food{
+    background-color: var(--bg-food-color);
+}
+
+.modal{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: #3b3b3b7c;
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.modal .startgame {
+    text-align: center;
+    padding: 2rem;
+    background-color: #636363;
+    border-radius: 30px;
+}
+
+.game-over{
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #636363;
+    border-radius: 30px;
+}
+
+.game-over h3{
+    text-align: center;
+}
+
+.game-over-hide{
+    display: none;
+}
+
+.btn{
+    margin: 1rem;
+    padding: 1.3rem;
+    border-radius: 50px;
+    font-size: 14px;
+    border: none;
+    background-color: rgb(22, 22, 22);
+    color: rgb(251, 237, 237);
+    transition: all 0.3s ease;   
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
+
